@@ -1,0 +1,108 @@
+{
+  "model_artifact": "advanced_pipeline.joblib",
+  "selected_model_name": "Ridge (All Eng Feats, alpha=10.0)",
+  "estimator": "Pipeline[FeatureEngineer, ColumnTransformer[StandardScaler, OneHotEncoder], Ridge(alpha=10.0)]",
+  "regressor_class": "Ridge",
+  "alpha": 10.0,
+  "hyperparameters": {
+    "alpha": 10.0,
+    "random_state": 42
+  },
+  "dataset_path": "D:\\Anushka\\IIT\\DS\\Employee Performance Predictor using Data Analytics\\data\\synthetic\\employee_performance.csv",
+  "dataset_sha256": "2df006a243b4bbb43299275073d91802f4fd524da6a5674b44092f0358f68e79",
+  "scikit_learn_version": "1.3.2",
+  "target_column": "future_performance_score",
+  "target_definition": "Continuous performance appraisal score awarded at end of period t on [1.00, 5.00] scale",
+  "training_periods": [
+    1,
+    2,
+    3
+  ],
+  "training_observations": 3000,
+  "test_period": 4,
+  "test_observations": 1000,
+  "base_feature_count": 10,
+  "base_numeric_features": [
+    "previous_performance_score",
+    "quality_score_previous_period",
+    "productivity_score_previous_period",
+    "project_completion_rate_previous_period",
+    "attendance_rate_previous_period",
+    "training_hours_previous_period",
+    "years_experience",
+    "tenure_months"
+  ],
+  "base_categorical_features": [
+    "department",
+    "job_role"
+  ],
+  "all_permitted_features": [
+    "previous_performance_score",
+    "quality_score_previous_period",
+    "productivity_score_previous_period",
+    "project_completion_rate_previous_period",
+    "attendance_rate_previous_period",
+    "training_hours_previous_period",
+    "years_experience",
+    "tenure_months",
+    "department",
+    "job_role"
+  ],
+  "engineered_feature_count": 4,
+  "engineered_candidate_features": [
+    "quality_to_productivity_ratio",
+    "completion_attendance_interaction",
+    "prev_perf_training_interaction",
+    "experience_adjusted_tenure"
+  ],
+  "total_features_pre_encoding": 14,
+  "feature_engineering": {
+    "transformer": "FeatureEngineer",
+    "candidate_features": [
+      "quality_to_productivity_ratio",
+      "completion_attendance_interaction",
+      "prev_perf_training_interaction",
+      "experience_adjusted_tenure"
+    ],
+    "formula_ratio": "quality_score_previous_period / max(productivity_score_previous_period, 0.01)",
+    "formula_completion_attendance": "project_completion_rate_previous_period * attendance_rate_previous_period",
+    "formula_perf_training": "previous_performance_score * training_hours_previous_period",
+    "formula_adjusted_tenure": "tenure_months / max(12.0 * years_experience, 1.0) clipped to [0.0, 1.0]"
+  },
+  "numeric_preprocessing": "StandardScaler() applied to 8 base numeric and 4 engineered numeric features",
+  "categorical_preprocessing": "OneHotEncoder(handle_unknown='ignore', sparse_output=False) applied to department and job_role",
+  "temporal_validation_protocol": {
+    "folds": [
+      {
+        "fold": 1,
+        "train_periods": [
+          1
+        ],
+        "val_period": 2
+      },
+      {
+        "fold": 2,
+        "train_periods": [
+          1,
+          2
+        ],
+        "val_period": 3
+      }
+    ],
+    "selection_metric": "mean_mae",
+    "validation_mae": 0.2307,
+    "validation_rmse": 0.2852,
+    "validation_r2": 0.7934
+  },
+  "period_4_holdout_evaluation": {
+    "training_observations": 3000,
+    "test_observations": 1000,
+    "mae": 0.2201,
+    "rmse": 0.2724,
+    "r2": 0.7869,
+    "mae_pct_change_vs_baseline": 0.42,
+    "out_of_bounds_count": 0,
+    "holdout_nature": "exploratory_benchmark",
+    "holdout_disclosure": "Period 4 was examined repeatedly during development; metrics serve as an exploratory benchmark rather than an untouched holdout."
+  }
+}

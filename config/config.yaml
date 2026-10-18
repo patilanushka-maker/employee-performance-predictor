@@ -1,0 +1,32 @@
+project:
+  name: "Employee Performance Predictor"
+  version: "0.1.0"
+  random_state: 42
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  data_synthetic: "data/synthetic"
+  models: "models"
+  outputs_figures: "outputs/figures"
+  outputs_reports: "outputs/reports"
+  outputs_predictions: "outputs/predictions"
+  outputs_metrics: "outputs/metrics"
+  sql: "sql"
+  notebooks: "notebooks"
+  dashboard: "dashboard"
+
+data_generation:
+  num_employees: 1000
+  num_periods: 4
+  random_seed: 42
+  output_path: "data/synthetic/employee_performance.csv"
+
+training:
+  target_column: "future_performance_score"
+  test_size: 0.20
+  cv_folds: 5
+  random_seed: 42
+
+logging:
+  level: "INFO"

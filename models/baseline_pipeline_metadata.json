@@ -1,0 +1,49 @@
+{
+  "model_artifact": "baseline_pipeline.joblib",
+  "estimator": "Ridge(alpha=1.0)",
+  "dataset_path": "D:\\Anushka\\IIT\\DS\\Employee Performance Predictor using Data Analytics\\data\\synthetic\\employee_performance.csv",
+  "dataset_sha256": "2df006a243b4bbb43299275073d91802f4fd524da6a5674b44092f0358f68e79",
+  "target_column": "future_performance_score",
+  "training_periods": [
+    1,
+    2,
+    3
+  ],
+  "training_observations": 3000,
+  "test_period": 4,
+  "test_observations": 1000,
+  "numeric_features": [
+    "previous_performance_score",
+    "quality_score_previous_period",
+    "productivity_score_previous_period",
+    "project_completion_rate_previous_period",
+    "attendance_rate_previous_period",
+    "training_hours_previous_period",
+    "years_experience",
+    "tenure_months"
+  ],
+  "categorical_features": [
+    "department",
+    "job_role"
+  ],
+  "all_permitted_features": [
+    "previous_performance_score",
+    "quality_score_previous_period",
+    "productivity_score_previous_period",
+    "project_completion_rate_previous_period",
+    "attendance_rate_previous_period",
+    "training_hours_previous_period",
+    "years_experience",
+    "tenure_months",
+    "department",
+    "job_role"
+  ],
+  "metrics_period_4": {
+    "mae": 0.2192,
+    "rmse": 0.2713,
+    "r2": 0.7885,
+    "min_pred": 1.8943,
+    "max_pred": 4.8947,
+    "out_of_bounds_count": 0
+  }
+}

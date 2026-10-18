@@ -1,0 +1,4 @@
+model_name,mae,rmse,r2,min_pred,max_pred,out_of_bounds_count
+DummyRegressor (Mean),0.4745,0.5946,-0.0158,3.2176,3.2176,0
+Previous-Performance-Only,0.2299,0.2848,0.7669,1.6471,4.7288,0
+Full-Feature Ridge Model,0.2192,0.2713,0.7885,1.8943,4.8947,0

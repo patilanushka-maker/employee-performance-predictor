@@ -1,0 +1,7 @@
+model_name,mae,rmse,r2,mae_pct_change_vs_baseline,rmse_pct_change_vs_baseline,r2_diff_vs_baseline,min_pred,max_pred,out_of_bounds_count
+DummyRegressor (Mean),0.4745,0.5946,-0.0158,116.47,119.17,-0.8043,3.2176,3.2176,0
+Previous-Performance-Only,0.2299,0.2848,0.7669,4.87,4.98,-0.0216,1.6471,4.7288,0
+Ridge Baseline (alpha=1.0),0.2192,0.2713,0.7885,-0.02,0.02,-0.0,1.8943,4.8947,0
+"Ridge (All Eng Feats, alpha=10.0)",0.2201,0.2724,0.7869,0.42,0.39,-0.0016,1.8526,4.8874,0
+"HistGradientBoosting (iter=100, leaf=31)",0.227,0.284,0.7682,3.54,4.7,-0.0203,1.7777,4.7961,0
+"RandomForest (depth=10, leaf=2)",0.2225,0.2781,0.7778,1.51,2.5,-0.0107,1.8235,4.6758,0

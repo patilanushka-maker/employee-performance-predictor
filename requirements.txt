@@ -1,0 +1,21 @@
+# Core data manipulation & numerical processing
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0
+
+# Configuration & environment management
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Machine learning & modeling foundation
+scikit-learn==1.3.2
+
+# Visualization & statistical computing
+matplotlib>=3.7.0
+scipy>=1.10.0
+
+# Web Dashboard & Presentation
+streamlit>=1.30.0
+
+# Automated testing
+pytest>=7.0.0
+

@@ -1,0 +1,130 @@
+"""Employee Performance Predictor package.
+
+Core package providing modules for synthetic data generation, validation,
+feature engineering, predictive modeling, statistical analysis, and explainability.
+"""
+
+from employee_performance.data_generator import (
+    SyntheticDataGenerator,
+    GeneratorConfig,
+    generate_synthetic_data,
+    DEPARTMENTS,
+    DEPARTMENT_ROLES,
+)
+from employee_performance.validation import (
+    DataValidator,
+    ValidationResult,
+    validate_dataset,
+    REQUIRED_COLUMNS,
+    NUMERICAL_BOUNDS,
+)
+from employee_performance.eda import (
+    compute_dataset_overview,
+    compute_correlations,
+    compute_department_metrics,
+    compute_job_role_metrics,
+    compute_period_trends,
+    analyze_training_relationship,
+    validate_eda_input,
+    REQUIRED_EDA_COLUMNS,
+    NUMERIC_PREDICTORS,
+    FEATURE_SPECS,
+)
+
+from employee_performance.train import (
+    ModelMetrics,
+    TemporalDataSplit,
+    prepare_temporal_split,
+    create_dummy_baseline_pipeline,
+    create_prev_performance_pipeline,
+    create_full_feature_pipeline,
+    evaluate_predictions,
+    train_and_evaluate_baselines,
+    ALL_PERMITTED_FEATURES,
+    FULL_FEATURE_NUMERIC,
+    FULL_FEATURE_CATEGORICAL,
+    TARGET_COLUMN,
+)
+
+from employee_performance.features import (
+    FeatureEngineer,
+    ALL_CANDIDATE_FEATURES,
+    CANDIDATE_FEATURE_A,
+    CANDIDATE_FEATURE_B,
+    CANDIDATE_FEATURE_C,
+    CANDIDATE_FEATURE_D,
+    calculate_experience_adjusted_tenure,
+    calculate_quality_to_productivity_ratio,
+    calculate_completion_attendance_interaction,
+    calculate_prev_perf_training_interaction,
+)
+from employee_performance.modeling import (
+    ValidationFold,
+    FoldMetric,
+    ModelComparisonResult,
+    UnseenEmployeeEvaluationResult,
+    create_temporal_validation_folds,
+    build_pipeline,
+    evaluate_pipeline_on_temporal_folds,
+    run_candidate_model_exploration,
+    evaluate_unseen_employee_generalization,
+    evaluate_final_holdout_period_4,
+)
+
+__version__ = "0.1.0"
+
+__all__ = [
+    "SyntheticDataGenerator",
+    "GeneratorConfig",
+    "generate_synthetic_data",
+    "DataValidator",
+    "ValidationResult",
+    "validate_dataset",
+    "DEPARTMENTS",
+    "DEPARTMENT_ROLES",
+    "REQUIRED_COLUMNS",
+    "NUMERICAL_BOUNDS",
+    "compute_dataset_overview",
+    "compute_correlations",
+    "compute_department_metrics",
+    "compute_job_role_metrics",
+    "compute_period_trends",
+    "analyze_training_relationship",
+    "validate_eda_input",
+    "REQUIRED_EDA_COLUMNS",
+    "NUMERIC_PREDICTORS",
+    "FEATURE_SPECS",
+    "ModelMetrics",
+    "TemporalDataSplit",
+    "prepare_temporal_split",
+    "create_dummy_baseline_pipeline",
+    "create_prev_performance_pipeline",
+    "create_full_feature_pipeline",
+    "evaluate_predictions",
+    "train_and_evaluate_baselines",
+    "ALL_PERMITTED_FEATURES",
+    "FULL_FEATURE_NUMERIC",
+    "FULL_FEATURE_CATEGORICAL",
+    "TARGET_COLUMN",
+    "FeatureEngineer",
+    "ALL_CANDIDATE_FEATURES",
+    "CANDIDATE_FEATURE_A",
+    "CANDIDATE_FEATURE_B",
+    "CANDIDATE_FEATURE_C",
+    "CANDIDATE_FEATURE_D",
+    "calculate_experience_adjusted_tenure",
+    "calculate_quality_to_productivity_ratio",
+    "calculate_completion_attendance_interaction",
+    "calculate_prev_perf_training_interaction",
+    "ValidationFold",
+    "FoldMetric",
+    "ModelComparisonResult",
+    "UnseenEmployeeEvaluationResult",
+    "create_temporal_validation_folds",
+    "build_pipeline",
+    "evaluate_pipeline_on_temporal_folds",
+    "run_candidate_model_exploration",
+    "evaluate_unseen_employee_generalization",
+    "evaluate_final_holdout_period_4",
+]
+

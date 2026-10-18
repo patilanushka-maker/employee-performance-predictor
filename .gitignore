@@ -1,0 +1,107 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets
+.env
+.env.local
+*.env
+!.env.example
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Testing & Coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Logs
+*.log
+
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Model artifacts and heavy binary formats (allow verified lightweight project pipelines)
+models/*.pkl
+models/*.joblib
+!models/advanced_pipeline.joblib
+!models/baseline_pipeline.joblib
+models/*.onnx
+models/*.pt
+models/*.h5
+!models/.gitkeep
+!models/*.json
+
+# Large raw datasets (keep .gitkeep and synthetic provenance)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated execution outputs (allow verified dashboard assets and reports)
+outputs/figures/*
+!outputs/figures/.gitkeep
+!outputs/figures/*.png
+outputs/reports/*
+!outputs/reports/.gitkeep
+!outputs/reports/*.md
+outputs/predictions/*
+!outputs/predictions/.gitkeep
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+!outputs/metrics/*.csv
+!outputs/metrics/*.json
+
