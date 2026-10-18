@@ -204,7 +204,7 @@ Employee Performance Predictor using Data Analytics/
 ### 2. Clone and Setup Environment
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/employee-performance-predictor.git
+git clone https://github.com/patilanushka-maker/employee-performance-predictor.git
 
 # Navigate into the project directory
 cd "employee-performance-predictor"
