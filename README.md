@@ -89,24 +89,26 @@ An interactive Streamlit application provides visual access to model artifacts, 
 
 ### Dashboard Screenshots:
 
-The images below illustrate key screens from the web application. Screenshots placed in the images/ directory are automatically referenced here:
+The images below illustrate key screens from the interactive web dashboard:
 
 #### 1. Overview and Project Scope
-![Overview and Project Scope](images/01_overview.png)
+![Overview and Project Scope](images/P3%20Out%20S1.jpg)
 
-#### 2. Exploratory Data Analysis and Correlation Structure
-![Exploratory Data Analysis](images/02_eda_correlations.png)
+#### 2. Exploratory Data Analysis: Target Score Distribution
+![Target Score Distribution](images/P3%20Out%20S3.jpg)
 
-#### 3. Model Benchmark Comparisons
-![Model Benchmarks](images/03_model_benchmarks.png)
+#### 3. Exploratory Data Analysis: Performance by Department and Role
+![Performance by Department and Role](images/P3%20Out%20S4.jpg)
 
 #### 4. Real-Time Interactive Prediction Interface
-![Interactive Prediction](images/04_prediction_interface.png)
+![Interactive Prediction Interface](images/P3%20Out%20S8.jpg)
 
-#### 5. What-If Scenario Simulation
-![What-If Scenario Simulation](images/05_whatif_analysis.png)
+#### 5. What-If Scenario Simulation: Operational Levers Configuration
+![What-If Scenario Simulation](images/P3%20Out%20S9.jpg)
 
-Note: If screenshot images are not yet added to the repository images/ folder, the links above will render the designated captures once image files are placed in images/.
+#### 6. What-If Scenario Simulation: Comparative Output Delta
+![What-If Scenario Results](images/P3%20Out%20S10.jpg)
+
 
 ---
 
@@ -147,11 +149,13 @@ Employee Performance Predictor using Data Analytics/
 │
 ├── images/                               # User interface screenshots and captures
 │   ├── .gitkeep                          # Preserves images directory in version control
-│   ├── 01_overview.png                   # Overview screen capture (placeholder link)
-│   ├── 02_eda_correlations.png           # EDA correlation screen capture (placeholder link)
-│   ├── 03_model_benchmarks.png           # Benchmarks comparison capture (placeholder link)
-│   ├── 04_prediction_interface.png       # Prediction form capture (placeholder link)
-│   └── 05_whatif_analysis.png            # Scenario simulator capture (placeholder link)
+│   ├── P3 Out S1.jpg                     # Overview and project scope dashboard capture
+│   ├── P3 Out S3.jpg                     # EDA target distribution histogram capture
+│   ├── P3 Out S4.jpg                     # EDA performance by department and role capture
+│   ├── P3 Out S8.jpg                     # Interactive prediction interface capture
+│   ├── P3 Out S9.jpg                     # What-If scenario parameter inputs capture
+│   ├── P3 Out S10.jpg                    # What-If scenario delta results capture
+│   └── README.md                         # Guide for repository image assets
 │
 ├── models/                               # Serialized machine learning artifacts
 │   ├── advanced_pipeline.joblib          # Serialized Ridge pipeline with interactions

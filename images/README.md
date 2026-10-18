@@ -2,11 +2,10 @@
 
 This directory stores visual screen captures of the interactive Streamlit dashboard.
 
-## Expected Screenshot Files:
-- 01_overview.png: Executive summary, project metrics, and operational boundary cards.
-- 02_eda_correlations.png: Correlation heatmap and target feature distribution charts.
-- 03_model_benchmarks.png: Expanding-window validation comparison tables and evaluation metrics.
-- 04_prediction_interface.png: Interactive prediction form with active model outputs.
-- 05_whatif_analysis.png: Side-by-side scenario simulation and operational delta indicators.
-
-Place screenshot captures with the exact filenames listed above to have them automatically display in the root README.md document.
+## Uploaded Screenshot Files:
+- P3 Out S1.jpg: Overview and Project Scope dashboard module with metrics and mandate.
+- P3 Out S3.jpg: Exploratory Data Analysis target appraisal score distribution.
+- P3 Out S4.jpg: Exploratory Data Analysis boxplots comparing performance across departments and job roles.
+- P3 Out S8.jpg: Interactive performance prediction interface with operational input sliders.
+- P3 Out S9.jpg: What-If scenario simulation interface comparing baseline against modified parameters.
+- P3 Out S10.jpg: What-If scenario comparative results displaying projected score delta.
